@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitrio – Sites web pour les commerces de Lausanne</title>
+<meta name="description" content="Vitrio crée des sites web modernes pour les commerces et artisans de Lausanne. Site livré en 5 jours, 390 CHF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B1F33;--accent:#14B8A6;--accent-strong:#0F766E;--spark:#F5B841;--surface:#F7F6F2;--card:#fff;--muted:#5B6878;--line:#E3E1DA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--surface);line-height:1.6;font-size:16px}
+h1,h2,h3,.disp{font-family:"Space Grotesk",system-ui,sans-serif;letter-spacing:-.02em}
+a{color:var(--accent-strong)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo b{font-family:"Space Grotesk",system-ui,sans-serif;font-size:26px;font-weight:700;letter-spacing:-1px}
+.logo b i{font-style:normal;color:var(--accent)}
+.pill{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:600}
+.pill.light{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{padding:72px 0 88px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-bottom:18px}
+.kicker span{width:8px;height:8px;border-radius:50%;background:var(--spark)}
+h1{font-size:clamp(38px,5.4vw,60px);line-height:1.02;font-weight:700}
+h1 em{font-style:normal;color:var(--accent-strong)}
+.hero p{font-size:18px;color:var(--muted);margin:22px 0 30px;max-width:46ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.window{background:var(--ink);border-radius:20px;padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;aspect-ratio:1}
+.window div{border-radius:10px;background:rgba(255,255,255,.08)}
+.window div.a{background:var(--accent)}.window div.s{background:var(--spark)}.window div.w{background:#fff}
+section{padding:80px 0}
+h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin-bottom:40px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.num{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:14px;color:var(--accent-strong);margin-bottom:10px}
+.card h3{font-size:20px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mock{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mock .bar{height:26px;background:#eceae4;display:flex;gap:6px;align-items:center;padding:0 10px}
+.mock .bar i{width:8px;height:8px;border-radius:50%;background:#cfccc3}
+.mock .scr{height:190px;padding:18px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.mock .scr b{font-family:"Space Grotesk",system-ui,sans-serif;font-size:22px;line-height:1.1}
+.mock .scr small{opacity:.85}
+.mock .scr .cta{margin-top:10px;align-self:flex-start;font-size:12px;padding:6px 12px;border-radius:999px;font-weight:600}
+.mock .meta{padding:16px 18px}
+.mock .meta h3{font-size:17px}
+.mock .meta p{font-size:14px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;background:#eef8f6;color:var(--accent-strong);padding:2px 10px;border-radius:999px;margin-bottom:8px;font-weight:600}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:#b9c4cf}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:30px}
+.pcard.main{background:#fff;color:var(--ink);border:none}
+.amount{font-family:"Space Grotesk",system-ui,sans-serif;font-size:46px;font-weight:700;line-height:1;margin:10px 0 4px}
+.amount small{font-size:16px;font-weight:500}
+.pcard ul{list-style:none;margin-top:18px}
+.pcard li{padding:7px 0 7px 26px;position:relative;font-size:15px}
+.pcard li:before{content:"";position:absolute;left:0;top:13px;width:12px;height:12px;border-radius:4px;background:var(--accent)}
+.pcard .sub{color:var(--muted)}
+.dark .pcard:not(.main) .sub{color:#b9c4cf}
+.faq{display:grid;gap:12px;max-width:760px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+summary{font-weight:600;cursor:pointer}
+details p{color:var(--muted);margin-top:10px}
+.contact{text-align:center;padding:90px 0}
+.contact h2{margin-bottom:14px}
+.mail{text-decoration:none;font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(20px,3vw,30px);font-weight:700;color:var(--ink);display:inline-block;margin:10px 0 26px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){.hero,.price{grid-template-columns:1fr}.grid3,.work{grid-template-columns:1fr}.window{max-width:320px}}
+
+header{position:sticky;top:0;z-index:20;transition:background .35s,box-shadow .35s}
+header.scrolled{background:rgba(247,246,242,.92);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line);max-width:none;padding:0 max(24px,calc((100% - 1032px)/2))}
+.pill{transition:transform .25s,box-shadow .25s,background .25s}
+.pill:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,31,51,.18)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.hero .reveal:nth-child(2){transition-delay:.1s}
+.window div{transform:scale(.6);opacity:0;transition:transform .6s cubic-bezier(.3,1.4,.5,1),opacity .6s,background .6s}
+.window.in div{transform:scale(1);opacity:1}
+.window div.glow{background:var(--accent)!important}
+.card,.mock,details{transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover,.mock:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,31,51,.10);border-color:#cfe9e4}
+.mock .scr{transition:transform .5s}
+.mock:hover .scr{transform:scale(1.03)}
+h1 em{background:linear-gradient(transparent 62%,rgba(20,184,166,.25) 62%);background-size:0 100%;background-repeat:no-repeat;transition:background-size 1s .6s}
+h1.in em{background-size:100% 100%}
+.amount span{display:inline-block}
+.cursor-dot{position:fixed;width:14px;height:14px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:50;opacity:0;transform:translate(-50%,-50%);transition:opacity .3s,width .25s,height .25s;mix-blend-mode:multiply}
+@media(hover:none){.cursor-dot{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal,.window div{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav>
+    <a class="logo" href="#top" aria-label="Vitrio">
+      <svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0B1F33"/><path d="M18 19 L32 46" stroke="#fff" stroke-width="7" stroke-linecap="round"/><path d="M32 46 L46 19" stroke="#14B8A6" stroke-width="7" stroke-linecap="round"/><circle cx="49" cy="14" r="3.2" fill="#F5B841"/></svg>
+      <b>vitrio<i>.</i></b>
+    </a>
+    <a class="pill" href="#contact">Nous contacter</a>
+  </nav>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <div class="kicker reveal"><span></span>Création de sites web · Lausanne</div>
+    <h1 class="reveal">La vitrine en ligne de votre <em>commerce</em>.</h1>
+    <p class="reveal">Nous créons des sites simples, rapides et beaux pour les commerces et artisans de la région lausannoise. Vous voyez votre site avant de payer quoi que ce soit.</p>
+    <div class="btns reveal">
+      <a class="pill" href="#contact">Demander ma démo gratuite</a>
+      <a class="pill light" href="#offre">Voir les prix</a>
+    </div>
+  </div>
+  <div class="window" aria-hidden="true">
+    <div></div><div></div><div class="a"></div>
+    <div></div><div class="w"></div><div></div>
+    <div class="s"></div><div></div><div class="a"></div>
+  </div>
+</div>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="reveal">Comment ça marche</h2>
+    <p class="lead reveal">Pas de rendez-vous interminables ni de jargon. Trois étapes, et votre commerce est trouvable en ligne.</p>
+    <div class="grid3">
+      <div class="card reveal"><div class="num">01</div><h3>Nous préparons votre démo</h3><p>Avec vos vraies informations : services, horaires, adresse, avis. Gratuitement et sans engagement.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Vous validez</h3><p>Vous nous dites ce qu'il faut changer : textes, photos, couleurs. Nous ajustons jusqu'à ce que ça vous plaise.</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>En ligne en 5 jours</h3><p>Votre site est publié, s'affiche parfaitement sur téléphone et apparaît sur Google.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efede7">
+  <div class="wrap">
+    <h2 class="reveal">Exemples de réalisations</h2>
+    <p class="lead reveal">Des concepts pour montrer le style Vitrio : clair, rapide, pensé pour le téléphone et pour faire appeler vos clients.</p>
+    <div class="work">
+      <div class="mock reveal">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="scr" style="background:#0f3d2e"><small>Garage toutes marques</small><b>Votre voiture entre de bonnes mains.</b><span class="cta" style="background:#f2b632;color:#2b2100">Appeler le garage</span></div>
+        <div class="meta"><span class="tag">Garage</span><h3>Garage automobile</h3><p>Services, horaires, avis Google et appel en un clic.</p></div>
+      </div>
+      <div class="mock reveal">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="scr" style="background:#2a1f1a"><small>Barbier · Centre-ville</small><b>La coupe nette, sans attendre.</b><span class="cta" style="background:#fff;color:#2a1f1a">Réserver en ligne</span></div>
+        <div class="meta"><span class="tag">Barbier</span><h3>Salon de barbier</h3><p>Tarifs clairs, galerie de coupes et réservation intégrée.</p></div>
+      </div>
+      <div class="mock reveal">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="scr" style="background:#7a4b2a"><small>Boulangerie artisanale</small><b>Le pain du quartier, chaque matin.</b><span class="cta" style="background:#f7e9d7;color:#5a341b">Voir la carte</span></div>
+        <div class="meta"><span class="tag">Boulangerie</span><h3>Boulangerie-café</h3><p>Carte du jour, commandes spéciales et plan d'accès.</p></div>
+      </div>
+    </div>
+    <p class="note">Les exemples ci-dessus sont des concepts de démonstration.</p>
+  </div>
+</section>
+
+<section class="dark" id="offre">
+  <div class="wrap">
+    <h2 class="reveal">Un prix simple</h2>
+    <p class="lead reveal">Une agence facture souvent plusieurs milliers de francs pour un site vitrine. Chez Vitrio, c'est un prix fixe, connu d'avance.</p>
+    <div class="price">
+      <div class="reveal pcard main">
+        <div class="sub">Création du site</div>
+        <div class="amount"><span data-count="390">390</span> <small>CHF</small></div>
+        <div class="sub">une seule fois · 50 % à la commande</div>
+        <ul>
+          <li>Site complet jusqu'à 5 sections</li>
+          <li>Parfait sur téléphone, tablette et ordinateur</li>
+          <li>Bouton d'appel, itinéraire et horaires</li>
+          <li>Référencement Google de base</li>
+          <li>En ligne en 5 jours ouvrables</li>
+        </ul>
+      </div>
+      <div class="reveal pcard">
+        <div class="sub">Hébergement et suivi</div>
+        <div class="amount"><span data-count="39">39</span> <small>CHF / mois</small></div>
+        <div class="sub">sans engagement de durée</div>
+        <ul>
+          <li>Hébergement et sécurité (HTTPS)</li>
+          <li>Modifications de textes et horaires incluses</li>
+          <li>Mises à jour techniques</li>
+          <li>Un studio basé à Lausanne</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="reveal">Questions fréquentes</h2>
+    <p class="lead reveal">Ce que les commerçants nous demandent le plus souvent.</p>
+    <div class="faq">
+      <details class="reveal"><summary>Je dois payer quelque chose pour voir la démo ?</summary><p>Non. La démo est gratuite et sans engagement. Vous ne payez que si vous décidez de mettre le site en ligne.</p></details>
+      <details class="reveal"><summary>Je n'y connais rien en informatique, c'est un problème ?</summary><p>Pas du tout. Nous nous occupons de tout : textes, mise en page, mise en ligne et nom de domaine. Vous validez simplement le résultat.</p></details>
+      <details class="reveal"><summary>Est-ce que je pourrai modifier mon site ?</summary><p>Oui. Avec l'offre de suivi, vous nous envoyez un message et nous faisons les changements pour vous (horaires, prix, photos).</p></details>
+      <details class="reveal"><summary>Et le nom de domaine (www.moncommerce.ch) ?</summary><p>Nous le réservons pour vous. Il est à votre nom et vous appartient.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Envie de voir votre futur site ?</h2>
+    <p class="lead reveal" style="margin:0 auto">Envoyez-nous le nom de votre commerce, nous vous préparons une démo gratuite sous 48 heures.</p>
+    <a class="mail" href="mailto:vitrio.lausanne@gmail.com">vitrio.lausanne@gmail.com</a><br>
+    <a class="pill" href="mailto:vitrio.lausanne@gmail.com?subject=Demande%20de%20d%C3%A9mo%20Vitrio">Demander ma démo</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Studio Vitrio · Lausanne</span><span>Création de sites web pour commerces et artisans</span></div>
+</footer>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<script>
+(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var header=document.querySelector('header');
+function onScroll(){header.classList.toggle('scrolled',window.scrollY>10)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.querySelectorAll('.grid3,.work,.price,.faq').forEach(function(g){Array.prototype.forEach.call(g.querySelectorAll('.reveal'),function(el,i){el.style.transitionDelay=(i*0.12)+'s'})});
+function countUp(el){var end=+el.dataset.count,start=null,d=1200;function step(t){if(!start)start=t;var p=Math.min((t-start)/d,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}if(reduce){el.textContent=end;return}el.textContent='0';requestAnimationFrame(step)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll&&e.target.querySelectorAll('[data-count]').forEach(countUp);io.unobserve(e.target)})},{threshold:.15});
+document.querySelectorAll('.reveal,.window').forEach(function(el){io.observe(el)});
+var panes=document.querySelectorAll('.window div');panes.forEach(function(p,i){p.style.transitionDelay=(0.25+i*0.07)+'s'});
+if(!reduce){setInterval(function(){var plain=Array.prototype.filter.call(panes,function(p){return !p.classList.contains('a')&&!p.classList.contains('s')&&!p.classList.contains('w')});var p=plain[Math.floor(Math.random()*plain.length)];if(!p)return;p.style.transitionDelay='0s';p.classList.add('glow');setTimeout(function(){p.classList.remove('glow')},900)},1400)}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})})});
+var dot=document.querySelector('.cursor-dot');
+if(!reduce&&window.matchMedia('(hover:hover)').matches){document.addEventListener('mousemove',function(e){dot.style.opacity=.55;dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px'});document.querySelectorAll('a,summary,.mock,.card').forEach(function(el){el.addEventListener('mouseenter',function(){dot.style.width='38px';dot.style.height='38px'});el.addEventListener('mouseleave',function(){dot.style.width='14px';dot.style.height='14px'})});document.addEventListener('mouseleave',function(){dot.style.opacity=0})}
+document.querySelectorAll('.mock').forEach(function(m){if(reduce)return;m.addEventListener('mousemove',function(e){var r=m.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;m.style.transform='translateY(-6px) perspective(700px) rotateY('+(x*6)+'deg) rotateX('+(-y*6)+'deg)'});m.addEventListener('mouseleave',function(){m.style.transform=''})});
+})();
+</script>
+</body>
+</html>
